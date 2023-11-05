@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3 uid="uid://sitpcnik06ox"]
+
+[ext_resource type="Theme" uid="uid://5uclmxmadcgl" path="res://Themes/Gold.tres" id="1_5sj16"]
+[ext_resource type="LabelSettings" uid="uid://bvjbk07eix8gp" path="res://styles/fontResource.tres" id="2_e4tkr"]
+
+[sub_resource type="GDScript" id="GDScript_4ehk5"]
+script/source = "extends Button
+
+# Exported variables
+@export var Class : String = \"No class\"
+@export var Rank : String = \"No rank\"
+"
+
+[sub_resource type="SystemFont" id="SystemFont_iemu7"]
+font_names = PackedStringArray("Impact")
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(250, 200)
+anchors_preset = -1
+anchor_right = 0.333333
+anchor_bottom = 0.197531
+size_flags_vertical = 3
+mouse_filter = 1
+theme = ExtResource("1_5sj16")
+script = SubResource("GDScript_4ehk5")
+metadata/_edit_use_anchors_ = true
+
+[node name="title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.052
+anchor_top = 0.125
+anchor_right = 0.625
+anchor_bottom = 0.75
+offset_left = 12.032
+offset_top = -17.0
+offset_right = 8.00024
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_iemu7")
+text = "This is a headline jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj"
+label_settings = ExtResource("2_e4tkr")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="worth" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.688
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.80826
+offset_top = 16.0
+offset_right = -15.9996
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_iemu7")
+text = "Money"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

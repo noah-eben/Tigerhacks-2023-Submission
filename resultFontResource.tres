@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dej8lriapnygm"]
+
+[sub_resource type="SystemFont" id="SystemFont_qydka"]
+font_names = PackedStringArray("Impact")
+
+[resource]
+font = SubResource("SystemFont_qydka")
+font_size = 35
+font_color = Color(0.00784314, 0.188235, 0.278431, 1)

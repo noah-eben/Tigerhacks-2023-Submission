@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://10pqwa5vv6ff"]
+
+[sub_resource type="SystemFont" id="SystemFont_8eaur"]
+font_names = PackedStringArray("Impact")
+
+[resource]
+font = SubResource("SystemFont_8eaur")
+font_size = 300

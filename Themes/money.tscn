@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://qaxgm0qi2wc4"]
+
+[ext_resource type="LabelSettings" uid="uid://10pqwa5vv6ff" path="res://Themes/timer.tres" id="1_6arne"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70x4j"]
+bg_color = Color(0.129412, 0.619608, 0.737255, 1)
+
+[sub_resource type="Theme" id="Theme_ovx84"]
+Label/styles/normal = SubResource("StyleBoxFlat_70x4j")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Funds Left" type="Label" parent="."]
+offset_right = 1312.0
+offset_bottom = 370.0
+text = "Funds Left:"
+label_settings = ExtResource("1_6arne")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Amount" type="Label" parent="."]
+offset_left = 1400.0
+offset_right = 2088.0
+offset_bottom = 370.0
+theme = SubResource("Theme_ovx84")
+text = "350"
+label_settings = ExtResource("1_6arne")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,189 @@
+[gd_scene load_steps=13 format=3 uid="uid://bp5yea6xyy82u"]
+
+[ext_resource type="Script" path="res://results.gd" id="1_asia4"]
+[ext_resource type="Texture2D" uid="uid://4oq25pdfwsru" path="res://sprites/UI_Flat_Banner_01_Upward.png" id="1_edn1y"]
+[ext_resource type="LabelSettings" uid="uid://dej8lriapnygm" path="res://resultFontResource.tres" id="2_fiysg"]
+[ext_resource type="Theme" uid="uid://jvk5kldul0yu" path="res://Themes/menuButtonTheme.tres" id="4_bw2bv"]
+
+[sub_resource type="SystemFont" id="SystemFont_8fjv8"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="LabelSettings" id="LabelSettings_dxyxb"]
+font = SubResource("SystemFont_8fjv8")
+font_size = 55
+font_color = Color(0.00784314, 0.188235, 0.278431, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_76r8c"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vrd21"]
+bg_color = Color(0.00784314, 0.188235, 0.278431, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uashq"]
+bg_color = Color(1, 0.717647, 0.0117647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 10
+
+[sub_resource type="SystemFont" id="SystemFont_px727"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_osylg"]
+font_names = PackedStringArray("Impact", "Impact")
+
+[sub_resource type="LabelSettings" id="LabelSettings_mvsbi"]
+font_size = 40
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_asia4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.556863, 0.792157, 0.901961, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 128.0
+offset_top = -8.0
+offset_right = -128.0
+offset_bottom = -400.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_edn1y")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 152.0
+offset_top = 64.0
+offset_right = -144.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "POLL RATINGS"
+label_settings = SubResource("LabelSettings_dxyxb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Public" type="Label" parent="."]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 240.0
+offset_right = 295.0
+offset_bottom = 311.0
+text = "Public"
+label_settings = ExtResource("2_fiysg")
+
+[node name="ProgressBar" type="ProgressBar" parent="Public"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.406
+anchor_top = 0.113
+anchor_right = 5.93
+anchor_bottom = 1.014
+offset_left = -0.0580139
+offset_top = -0.0230007
+offset_right = 0.00994873
+offset_bottom = -0.994003
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_76r8c")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/background = SubResource("StyleBoxFlat_vrd21")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uashq")
+
+[node name="Government" type="Label" parent="."]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 344.0
+offset_right = 427.0
+offset_bottom = 415.0
+text = "Government"
+label_settings = ExtResource("2_fiysg")
+
+[node name="ProgressBar" type="ProgressBar" parent="Government"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.251
+anchor_top = 0.113
+anchor_right = 3.084
+anchor_bottom = 1.0
+offset_left = -0.0250244
+offset_top = -0.0230007
+offset_right = -0.100037
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_px727")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/background = SubResource("StyleBoxFlat_vrd21")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uashq")
+
+[node name="Big Corp" type="Label" parent="."]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 448.0
+offset_right = 343.0
+offset_bottom = 519.0
+text = "Big Corp"
+label_settings = ExtResource("2_fiysg")
+
+[node name="ProgressBar" type="ProgressBar" parent="Big Corp"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.801
+anchor_top = 0.113
+anchor_right = 4.44
+anchor_bottom = 1.0
+offset_left = 0.00897217
+offset_top = -0.0230007
+offset_right = -0.0400391
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_osylg")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/background = SubResource("StyleBoxFlat_vrd21")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uashq")
+
+[node name="Quit" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 0
+offset_left = 427.0
+offset_top = 536.0
+offset_right = 727.0
+offset_bottom = 636.0
+theme = ExtResource("4_bw2bv")
+
+[node name="Label" type="Label" parent="Quit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "QUIT"
+label_settings = SubResource("LabelSettings_mvsbi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://cre7n6rn0jiag"]
+
+[ext_resource type="Script" path="res://timer.gd" id="1_mmktj"]
+[ext_resource type="Texture2D" uid="uid://dxm1nucha47px" path="res://sprites/image.png" id="2_f07bg"]
+[ext_resource type="Texture2D" uid="uid://btn3ixlmmnyai" path="res://sprites/image (2).png" id="3_fskit"]
+[ext_resource type="Texture2D" uid="uid://yx10fe8m7p12" path="res://sprites/image (1).png" id="4_21ln6"]
+[ext_resource type="LabelSettings" uid="uid://10pqwa5vv6ff" path="res://Themes/timer.tres" id="5_ojvxc"]
+
+[sub_resource type="SystemFont" id="SystemFont_th545"]
+font_names = PackedStringArray("Impact")
+font_weight = 425
+
+[sub_resource type="Theme" id="Theme_1igdn"]
+default_font = SubResource("SystemFont_th545")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_mmktj")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Rounded" type="TextureProgressBar" parent="."]
+offset_left = 1320.0
+offset_right = 1832.0
+offset_bottom = 512.0
+max_value = 30.0
+fill_mode = 5
+texture_under = ExtResource("2_f07bg")
+texture_over = ExtResource("3_fskit")
+texture_progress = ExtResource("4_21ln6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1928.0
+offset_right = 2472.0
+offset_bottom = 496.0
+theme = SubResource("Theme_1igdn")
+label_settings = ExtResource("5_ojvxc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Time Left" type="Label" parent="."]
+offset_right = 1208.0
+offset_bottom = 512.0
+text = "Time Left:"
+label_settings = ExtResource("5_ojvxc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

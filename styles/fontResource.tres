@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bvjbk07eix8gp"]
+
+[sub_resource type="SystemFont" id="SystemFont_6w2xg"]
+font_names = PackedStringArray("Impact")
+
+[resource]
+font = SubResource("SystemFont_6w2xg")
+font_size = 18

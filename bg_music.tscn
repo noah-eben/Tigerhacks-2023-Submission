@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://clucyne2tinii"]
+
+[ext_resource type="AudioStream" uid="uid://djumw5qoqiag7" path="res://audio/Groovy booty.ogg" id="1_oycwn"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_oycwn")
+autoplay = true

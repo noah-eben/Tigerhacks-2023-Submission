@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtpeepony0i4a"]
+
+[ext_resource type="Theme" uid="uid://5uclmxmadcgl" path="res://Themes/Gold.tres" id="1_upavv"]
+[ext_resource type="LabelSettings" uid="uid://bvjbk07eix8gp" path="res://styles/fontResource.tres" id="2_mkcav"]
+
+[sub_resource type="GDScript" id="GDScript_4ehk5"]
+script/source = "extends Button
+
+# Exported variables
+@export var Class : String = \"No class\"
+@export var Rank : String = \"No rank\"
+"
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(250, 200)
+anchors_preset = -1
+anchor_right = 0.333
+anchor_bottom = 0.309
+offset_right = 0.383606
+offset_bottom = -72.2319
+size_flags_vertical = 3
+mouse_filter = 1
+theme = ExtResource("1_upavv")
+script = SubResource("GDScript_4ehk5")
+metadata/_edit_use_anchors_ = true
+
+[node name="title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.583
+anchor_bottom = 0.96
+offset_left = 32.0
+offset_right = -7.87177
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "This is a headline jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj"
+label_settings = ExtResource("2_mkcav")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="worth" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.688
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.80826
+offset_top = 16.0
+offset_right = -15.9996
+grow_horizontal = 2
+grow_vertical = 2
+text = "Money"
+label_settings = ExtResource("2_mkcav")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
